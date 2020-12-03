@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SELF-RECORDING</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide"
+          style="background-image: url(./1grd.png)"
+          onclick="location.href='./1grd.html'"
+        ></div>
+        <div
+          class="swiper-slide"
+          style="background-image: url(./2grd.png)"
+          onclick="location.href='./2grd.html'"
+        ></div>
+        <div
+          class="swiper-slide"
+          style="background-image: url(./3grd.png)"
+          onclick="location.href='./3grd.html'"
+        ></div>
+        <div
+          class="swiper-slide"
+          style="background-image: url(./etc.png)"
+          onclick="location.href='./etc.html'"
+        ></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+    <div id="root"></div>
+  </body>
+</html>

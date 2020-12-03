@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1학년 수상</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #333;
+        height: 25px;
+        min-width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="input1" />
+      <input type="text" id="input2" />
+      <input type="text" id="input3" />
+      <input type="text" id="input4" />
+      <input type="text" id="input5" />
+      <button onclick="addRow()">입력</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>날짜</th>
+          <th>수상명</th>
+          <th>수상결과</th>
+          <th>인원</th>
+          <th>활동내용</th>
+        </tr>
+      </thead>
+      <tbody class="list"></tbody>
+    </table>
+    <script>
+      const input1 = document.querySelector("#input1");
+      const input2 = document.querySelector("#input2");
+      const input3 = document.querySelector("#input3");
+      const input4 = document.querySelector("#input4");
+      const input5 = document.querySelector("#input5");
+      const list = document.querySelector(".list");
+      function addRow() {
+        const tr = document.createElement("tr");
+        const item = `<td>${input1.value}</td><td>${input2.value}</td><td>${input3.value}</td><td>${input4.value}</td><td>${input5.value}</td>`;
+        tr.innerHTML = item;
+        console.log(tr);
+        list.appendChild(tr);
+      }
+    </script>
+  </body>
+</html>

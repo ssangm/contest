@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SELF-RECORDING-1GRADE</title>
+	<!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+body {
+  background-image: url('bg1.jpg');
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color:#000;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 30px;
+  background: #fff; opacity: 90%;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+  </style>
+</head>
+
+<body>
+	<!-- Swiper -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" onclick="location.href='./index.html'" >HOME</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/ntest.html','1학년 내신','width=1000,height=700,location=no,status=no,scrollbars=yes');">내신성적</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/motest.html','1학년 모의고사','width=1000,height=700,location=no,status=no,scrollbars=yes');">모의고사</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/prize.html','1학년 수상경력','width=1000,height=700,location=no,status=no,scrollbars=yes');">수상경력</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/future.html','1학년 진로희망','width=700,height=700,location=no,status=no,scrollbars=yes');">진로희망사항</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/free.html','1학년 자율','width=1000,height=700,location=no,status=no,scrollbars=yes');">자율활동</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/group.html','1학년 동아리','width=1000,height=700,location=no,status=no,scrollbars=yes');">동아리활동</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/volunteer.html','1학년 봉사','width=1000,height=700,location=no,status=no,scrollbars=yes');">봉사활동</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/futureact.html','1학년 진로활동','width=1000,height=700,location=no,status=no,scrollbars=yes');">진로활동</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/special.html','1학년 세특','width=700,height=700,location=no,status=no,scrollbars=yes');">교과세특</div>
+			<div class="swiper-slide" onclick="window.open('/popup/1g/book.html','1학년 독서','width=700,height=700,location=no,status=no,scrollbars=yes');">독서활동</div>
+		</div>
+		<!-- Add Pagination -->
+		<div class="swiper-pagination"></div>
+	</div>
+
+	<!-- Swiper JS -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+  </script>
+  
+</body>
+
+</html>

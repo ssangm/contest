@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1학년 진로활동</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #333;
+        height: 25px;
+        min-width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="input1" />
+      <input type="text" id="input2" />
+      <input type="text" id="input3" />
+      <input type="text" id="input4" />
+      <button onclick="addRow()">입력</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>활동명</th>
+          <th>일시</th>
+          <th>나의 역할</th>
+          <th>느낀점</th>
+        </tr>
+      </thead>
+      <tbody class="list"></tbody>
+    </table>
+    <script>
+      const input1 = document.querySelector("#input1");
+      const input2 = document.querySelector("#input2");
+      const input3 = document.querySelector("#input3");
+      const input4 = document.querySelector("#input4");
+      const list = document.querySelector(".list");
+      function addRow() {
+        const tr = document.createElement("tr");
+        const item = `<td>${input1.value}</td><td>${input2.value}</td><td>${input3.value}</td><td>${input4.value}</td>`;
+        tr.innerHTML = item;
+        console.log(tr);
+        list.appendChild(tr);
+      }
+    </script>
+  </body>
+</html>
